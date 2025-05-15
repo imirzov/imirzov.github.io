@@ -5,5 +5,6 @@ p {padding-bottom: 10px;}
 div#left {float:left;}
 div#container {max-width: 800px; margin: 0 auto;}
 div#social {text-align: center; margin: 20px 0;}
+div#social a {text-decoration: none; padding: 0 3px;}
 div#contact {text-align: center; color: #666; font-size: small;}
 div#container article {margin-left: 230px;}
