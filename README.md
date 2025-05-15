@@ -1,1 +1,0 @@
-# imirzov.github.io
