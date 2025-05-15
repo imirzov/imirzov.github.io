@@ -1,10 +1,20 @@
-* {margin: 0; padding: 0;}
-body {font-family: Arial, sans-serif; min-height: 100vh; align-content: center;}
-h1 {color: #333; padding-bottom: 20px;}
-p {padding-bottom: 10px;}
-div#left {float:left;}
-div#container {max-width: 800px; margin: 0 auto;}
-div#social {text-align: center; margin: 20px 0;}
-div#social a {text-decoration: none; padding: 0 3px;}
-div#contact {text-align: center; color: #666; font-size: small;}
-div#container article {margin-left: 230px;}
+* {margin:0; padding:0;}
+body {font-family:Arial, sans-serif; min-height:100vh; align-content:center;}
+h1 {color:#333; padding-bottom:20px;}
+p {padding-bottom:10px;}
+img#face {float:left; clear:left; width:200px; margin: 0 20px 20px 0;}
+div#social a {text-decoration:none; padding:0 3px;}
+div#contact {text-align:center; color:#666; font-size:small; margin:20px 0;}
+
+@media only screen and (max-width: 800px) {
+    div#container {max-width:350px; margin:20px auto;}
+    div#container article {clear:both;}
+    div#social { padding-left:220px;}
+    div#social a {display:block; margin-bottom:8px;}
+}
+@media only screen and (min-width: 800px) {
+    div#container {max-width:800px; margin:0 auto;}
+    div#container article {margin-left:230px;}
+    div#social {float:left; clear:left; width:200px; text-align:center;}
+    div#contact {float:left; clear:left; width:200px;}
+}
