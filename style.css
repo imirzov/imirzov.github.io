@@ -1,26 +1,9 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 20px;
-}
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 40px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-}
-h1 {
-  color: #333;
-}
-p {
-  margin-bottom: 15px;
-}
-.contact {
-  margin-top: 20px;
-}
-img#face {float:left;}
-.container article {margin-left: 250px;}
+* {margin: 0; padding: 0;}
+body {font-family: Arial, sans-serif; min-height: 100vh; align-content: center;}
+h1 {color: #333; padding-bottom: 20px;}
+p {padding-bottom: 10px;}
+div#left {float:left;}
+div#container {max-width: 800px; margin: 0 auto;}
+div#social {text-align: center; margin: 20px 0;}
+div#contact {text-align: center; color: #666; font-size: small;}
+div#container article {margin-left: 230px;}
