@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {text-align: center;}
+        table {padding: 40px 0; margin: 0 auto;}
+        table * {
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Occupancy Sync</h1>
+    <table>
+        <th>
+            <td>Capacity</td><td>Visitors</td><td>Available</td>
+        </th>
+        <tr>
+            <td>Men</td><td id="capacity_men"></td><td id="visitors_men"></td><td id="available_men"></td>
+        </tr>
+        <tr>
+            <td>Women</td><td id="capacity_women"></td><td id="visitors_women"></td><td id="available_women"></td>
+        </tr>
+    </table>
+    <p>Last Update: <span id="datetime">-</span></p>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDonMAtL6KYFX6BADnaujeh5rvhIa9Orbc",
+            authDomain: "mirzov-d1e75.firebaseapp.com",
+            databaseURL: "https://mirzov-d1e75-default-rtdb.europe-west1.firebasedatabase.app/",
+            projectId: "mirzov-d1e75",
+            storageBucket: "mirzov-d1e75.firebasestorage.app",
+            messagingSenderId: "567234498388",
+            appId: "1:567234498388:web:1e2750c8c7512abeb742c1"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        // console.log("Attempting to connect to path: gym_occupancy");
+
+        // Listen for data
+        database.ref("gym_occupancy").on("value", (snapshot) => {
+            const data = snapshot.val();
+            document.getElementById("capacity_men").innerText = data.Men.capacity;
+            document.getElementById("capacity_women").innerText = data.Women.capacity;
+            document.getElementById("visitors_men").innerText = data.Men.visitors;
+            document.getElementById("visitors_women").innerText = data.Women.visitors;
+            document.getElementById("available_men").innerText = Math.max(0, data.Men.capacity - data.Men.visitors);
+            document.getElementById("available_women").innerText = Math.max(0, data.Women.capacity - data.Women.visitors);
+            document.getElementById("datetime").innerText = data.datetime;
+        });
+    </script>
+</body>
+
+</html>
