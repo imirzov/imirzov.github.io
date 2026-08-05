@@ -5,9 +5,10 @@ div.gallery {
 }
 
 div.gallery-item {
-  margin: 5px;
+  margin-right: 1%;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
-  width: 200px;
+  width: 15%;
   height: 100px;
   overflow: hidden;
 }

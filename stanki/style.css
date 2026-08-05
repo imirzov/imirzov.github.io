@@ -129,6 +129,11 @@ header p {
     color: #22543d;
 }
 
+.status-sold {
+    background-color: #ccc;
+    color: #333;
+}
+
 .contact-card {
     background: linear-gradient(135deg, var(--primary-color), #34495e);
     color: white;
@@ -165,3 +170,5 @@ header p {
     .item-table th, .item-table td { padding: 10px; }
     .item-table th:nth-child(3), .item-table td:nth-child(3) { display: none; }
 }
+
+s {color: #999;}
