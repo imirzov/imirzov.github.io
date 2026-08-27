@@ -115,9 +115,17 @@ header p {
     color: #22543d;
 }
 
-.status-sold {
-    background-color: #ccc;
-    color: #333;
+td.leonid {
+    text-decoration: line-through;
+    color: orange;
+}
+td.serhii {
+    text-decoration: line-through;
+    color: purple;
+}
+td.dmytro {
+    text-decoration: line-through;
+    color: deeppink;
 }
 
 .contact-card {
